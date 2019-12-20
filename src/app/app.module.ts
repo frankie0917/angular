@@ -20,7 +20,9 @@ import { TableDetailComponent } from './table/table-detail/table-detail.componen
 import { TableDetailListComponent } from './table/table-detail/table-detail-list/table-detail-list.component';
 import { TableDetailEditComponent } from './table/table-detail/table-detail-edit/table-detail-edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DynamicFormsCoreModule } from '@ng-dynamic-forms/core';
 import { DynamicFormsMaterialUIModule } from "@ng-dynamic-forms/ui-material";
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,11 @@ import { DynamicFormsMaterialUIModule } from "@ng-dynamic-forms/ui-material";
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    DynamicFormsMaterialUIModule
+    DynamicFormsCoreModule,
+    DynamicFormsMaterialUIModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

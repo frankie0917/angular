@@ -1,3 +1,39 @@
 <div class="container">
+  <div>
+    <span class="bread-crumb">
+      <a routerLink="/">主页</a>
+      /
+      <a routerLink="/table">所有表格</a>
+      /
+      <a [routerLink]="'/table/detail/'+tableId">表格(id:{{ tableId }})详情</a>
+      /
+      <a *ngIf="currentPage === 'list'">表格(id:{{ tableId }})所有数据</a >
+      <a *ngIf="currentPage === 'create'">表格(id:{{ tableId }})创建数据</a>
+      <a *ngIf="currentPage === 'edit'">表格(id:{{ tableId }})编辑数据</a>
+    </span>
+  </div>
+  <div
+    style="
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;"
+  >
+    <button
+      style="width: 20%;"
+      (click)="navigate('list')"
+      mat-raised-button
+      class="mat-primary"
+    >
+      所有数据
+    </button>
+    <button
+      style="width: 20%;"
+      (click)="navigate('create')"
+      mat-raised-button
+      class="mat-accent"
+    >
+      添加数据
+    </button>
+  </div>
   <router-outlet></router-outlet>
 </div>
