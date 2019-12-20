@@ -1,0 +1,16 @@
+<div class="container">
+  <form class="container" [formGroup]="form" fxLayout="column">
+    <mat-card>
+      <h2>添加流程</h2>
+      <mat-form-field>
+        <input type="text" matInput placeholder="流程名" />
+      </mat-form-field>
+    </mat-card>
+    <button mat-raised-button class="mat-primary" type="button">添加节点</button>
+    <mat-card>
+      <mat-form-field>
+        <input matInput formControlName="name" placeholder="节点名称" />
+      </mat-form-field>
+    </mat-card>
+  </form>
+</div>
